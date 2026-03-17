@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Landing Page Chaussure</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--  lien vers le CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!--  accessibilité clavier -->
+    <a href="#contenu" class="skip-link">Aller au contenu</a>
+
+    <div class="page">
+      <main id="contenu">
+        <!-- =========================
+             HERO 1 
+        ========================== -->
+        <header class="hero hero--haut" aria-label="Section principale">
+          <div class="hero__contenu">
+            <h1 class="titre">Conçue<br />Pour Voler</h1>
+
+            <p class="accroche">
+              Découvrez <strong>FlightRunner</strong>.<br />
+              Notre chaussure la plus légère, à ce jour.
+            </p>
+
+            <a
+              href="#boutique"
+              class="btn btn--noir"
+              aria-label="Aller à la boutique"
+              >BOUTIQUE</a
+            >
+          </div>
+
+          <div class="hero__media" aria-hidden="true">
+            <img
+              src="assets/chaussure-hero.png"
+              alt="Chaussure FlightRunner violette"
+              class="shoe shoe--hero"
+            />
+          </div>
+        </header>
+
+        <!-- =========================
+             CARTES FEMME / HOMME 
+        ========================== -->
+        <section class="categories narrow" aria-label="Catégories">
+          <a
+            href="#boutique"
+            class="carte"
+            aria-label="Voir la collection Femme"
+          >
+            <h2 class="carte__titre">Femme</h2>
+            <p class="carte__lien">
+              Acheter <span class="point" aria-hidden="true"></span>
+            </p>
+          </a>
+
+          <a
+            href="#boutique"
+            class="carte"
+            aria-label="Voir la collection Homme"
+          >
+            <h2 class="carte__titre">Homme</h2>
+            <p class="carte__lien">
+              Acheter <span class="point" aria-hidden="true"></span>
+            </p>
+          </a>
+        </section>
+
+        <!-- =========================
+             AVANTAGES
+
+        ========================== -->
+        <section class="avantages narrow" aria-label="Avantages">
+          <article class="avantage">
+            <!-- Icône newsletter -->
+            <div class="avantage__icone">
+              <span class="icone">✉️</span>
+            </div>
+
+            <h3 class="avantage__titre">Ne ratez<br />aucune sortie</h3>
+
+            <p class="avantage__texte">
+              Recevez des infos sur les nouveautés, tailles et promos.
+            </p>
+          </article>
+
+          <article class="avantage">
+            <!-- Icône confort -->
+            <div class="avantage__icone">
+              <span class="icone">👟</span>
+            </div>
+
+            <h3 class="avantage__titre">Confort<br />au quotidien</h3>
+
+            <p class="avantage__texte">
+              Amorti souple et maintien précis pour marcher longtemps.
+            </p>
+          </article>
+
+          <article class="avantage">
+            <!-- Icône style -->
+            <div class="avantage__icone">
+              <span class="icone">✨</span>
+            </div>
+
+            <h3 class="avantage__titre">Style<br />urbain</h3>
+
+            <p class="avantage__texte">
+              Un look simple, efficace, facile à assortir.
+            </p>
+          </article>
+        </section>
+
+        <!-- =========================
+             HERO 2
+        ========================== -->
+        <section class="hero hero--bas" aria-label="Section promotionnelle">
+          <div class="hero__media" aria-hidden="true">
+            <img
+              class="shoe shoe--photo shoe--flip"
+              src="assets/chaussure-ambiance-1.jpg"
+              alt="Chaussure ambiance de nuit"
+            />
+          </div>
+
+          <div class="hero__contenu">
+            <h2 class="titre titre--h2">Conçue<br />Pour Voler</h2>
+
+            <p class="accroche">
+              Nouveau modèle <strong>FlightRunner</strong>.<br />
+              Légère, stable, prête pour la ville.
+            </p>
+
+            <a
+              id="boutique"
+              class="btn btn--noir"
+              href="#"
+              aria-label="Acheter maintenant"
+            >
+              BOUTIQUE
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <!-- =========================
+           FOOTER 
+      ========================== -->
+      <footer class="footer" aria-label="Pied de page">
+        <h2 class="footer__titre">Ne ratez<br />aucune sortie</h2>
+
+        <form
+          class="footer__form"
+          action="#"
+          method="post"
+          aria-label="Inscription newsletter"
+        >
+          <label class="sr-only" for="email">Votre email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Votre email"
+            required
+          />
+          <button class="btn btn--clair" type="submit">S’inscrire</button>
+        </form>
+
+        <p class="footer__copy">© 2026 FlightRunner</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WORLD MEET</title>
+    <link rel="shortcut icon" href="assets/logo.jpg" type="image/x-icon" />
+    <!-- Police Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+                HEADER + NAV
+         ========================= -->
+    <header class="site-header">
+      <!-- Conteneur centré -->
+      <div class="container nav">
+        <!-- Bloc gauche : logo + nom -->
+        <div class="nav__brand">
+          <!-- Logo -->
+          <img src="assets/logo.jpg" alt="Logo Meet" class="nav__logo" />
+          <span class="nav__name">Meet World</span>
+        </div>
+
+        <!-- Checkbox qui ouvre/ferme le menu sur mobile -->
+        <input type="checkbox" id="nav-toggle" class="nav__checkbox" />
+
+        <!-- Bouton hamburger (lié à la checkbox) -->
+        <label for="nav-toggle" class="nav__toggle" aria-label="Ouvrir le menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <!-- Menu principal -->
+        <nav class="nav__menu">
+          <!-- Liens de navigation -->
+          <ul class="nav__links">
+            <li><a href="#hero">Solutions</a></li>
+            <li><a href="#hero">Produits</a></li>
+            <li><a href="#features">Secteurs</a></li>
+            <li><a href="#features">Tarifs</a></li>
+            <li><a href="#features">Ressources</a></li>
+          </ul>
+
+          <!-- Bloc droit : boutons d’action -->
+          <div class="nav__actions">
+            <a href="#" class="btn btn--ghost">Se connecter</a>
+            <a href="#" class="btn btn--primary">Essayer Meet au travail</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- =========================
+         CONTENU PRINCIPAL
+         ========================= -->
+    <main>
+      <!-- ===== HERO ===== -->
+      <section class="hero" id="hero">
+        <div class="container hero__inner">
+          <!-- Colonne texte -->
+          <div class="hero__content">
+            <h1>
+              Des appels vidéo avec qui
+              <span class="accent">où</span>
+              que vous soyez
+            </h1>
+
+            <p class="hero__text">
+              Restez connecté et collaborez avec vos amis, votre famille et vos
+              collègues, quel que soit l'endroit où vous vous trouvez.
+              Participez à des réunions depuis votre téléphone mobile ou votre
+              tablette via l'application Meet, ou directement depuis le
+              navigateur de votre ordinateur.
+            </p>
+
+            <!-- Boutons -->
+            <div class="hero__actions">
+              <a href="#" class="btn btn--ghost">Se connecter</a>
+              <a href="#" class="btn btn--primary">Essayer Meet au travail</a>
+            </div>
+          </div>
+
+          <!-- Colonne image -->
+          <div class="hero__media">
+            <img src="assets/hero.webp" alt="Appel vidéo en groupe" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SECTION FONCTIONNALITÉS ===== -->
+      <section class="section section-features" id="features">
+        <div class="container">
+          <!-- Titre de section -->
+          <header class="section__header">
+            <h2>
+              Nos principales
+              <span class="accent">fonctionnalités</span>
+            </h2>
+          </header>
+
+          <!-- Grille de 3 cartes -->
+          <div class="features__grid">
+            <!-- Carte 1 -->
+            <article class="feature-card">
+              <img
+                src="assets/block1.png"
+                alt="Durée d'appel prolongée"
+                class="feature-card__img"
+              />
+              <h3>Communiquez plus longtemps</h3>
+              <p>
+                Organisez des appels de groupe pouvant durer jusqu'à
+                24&nbsp;heures.
+              </p>
+            </article>
+
+            <!-- Carte 2 -->
+            <article class="feature-card">
+              <img
+                src="assets/block2.png"
+                alt="Enregistrement d'appel"
+                class="feature-card__img"
+              />
+              <h3>Enregistrez vos appels vidéo</h3>
+              <p>
+                Conservez une copie de vos réunions importantes pour les revoir
+                plus tard.
+              </p>
+            </article>
+
+            <!-- Carte 3 -->
+            <article class="feature-card">
+              <img
+                src="assets/block3.png"
+                alt="Gestion des participants"
+                class="feature-card__img"
+              />
+              <h3>Organisez de grandes réunions</h3>
+              <p>
+                Ajoutez facilement de nombreux participants et gardez le
+                contrôle sur qui rejoint.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SECTION "PLUS DE POSSIBILITÉS POUR COMMUNIQUER" ===== -->
+      <section class="section section-communication">
+        <div class="container section__row">
+          <!-- Image à gauche -->
+          <div class="section__media">
+            <img src="assets/section2.webp" alt="Réunion vidéo en direct" />
+          </div>
+
+          <!-- Texte à droite -->
+          <div class="section__content">
+            <h2>
+              Plus de possibilités
+              <span class="accent">pour communiquer</span>
+            </h2>
+            <p>
+              Réunions planifiées ou spontanées, appels en temps réel ou
+              messages vidéo : Meet propose différentes options pour vous aider
+              à communiquer comme vous le voulez.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SECTION "UTILISEZ MEET SUR N'IMPORTE QUEL APPAREIL" ===== -->
+      <section class="section section-devices">
+        <div class="container section__row section__row--reverse">
+          <!-- Texte à gauche -->
+          <div class="section__content">
+            <h2>
+              Utilisez Meet sur n'importe
+              <span class="accent">quel appareil</span>
+            </h2>
+            <p>
+              Participez à des réunions depuis votre téléphone mobile ou votre
+              tablette via l'application Meet, ou depuis le navigateur de votre
+              ordinateur, sans avoir à installer de logiciel supplémentaire.
+            </p>
+          </div>
+
+          <!-- Image à droite -->
+          <div class="section__media">
+            <img
+              src="Assets/section 3.webp"
+              alt="Meet sur plusieurs appareils"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <p>© 2025 Refonte du site "Meet" - Exercice Responsive Design</p>
+      </div>
+    </footer>
+  </body>
+</html>

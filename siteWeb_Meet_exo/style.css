@@ -1,0 +1,551 @@
+/* =========================
+   VARIABLES & STYLES GLOBAUX
+   ========================= */
+
+/* Variables CSS pour les couleurs, ombres, etc. */
+:root {
+    --color-bg: #ffffff;              /* Fond principal */
+    --color-bg-alt: #f8f9fb;          /* Fond alternatif léger */
+    --color-primary: #1a73e8;         /* Bleu principal */
+    --color-text: #202124;            /* Texte principal */
+    --color-muted: #5f6368;           /* Texte secondaire */
+    --color-border: #e0e3eb;          /* Bordures légères */
+
+    --radius-lg: 18px;                /* Bordure des cartes */
+    --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.08); /* Ombre pour cartes/images */
+    --max-width: 1100px;              /* Largeur max du contenu */
+    --nav-height: 70px;               /* Hauteur de la barre de navigation */
+}
+
+/* Remise à zéro du box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Comportement du scroll  */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Style du body */
+body {
+    margin: 0;
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+}
+
+/* Liens */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Conteneur central pour limiter la largeur de la page */
+.container {
+    width: min(100% - 2.5rem, var(--max-width)); /* marges latérales + largeur max */
+    margin: 0 auto;
+}
+
+/* Classe pour les <span> */
+.accent {
+    color: var(--color-primary);
+}
+
+/* =========================
+   HEADER & NAVIGATION
+   ========================= */
+
+/* Barre du haut */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* Ligne de navigation */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--nav-height);
+}
+
+/* Bloc logo + nom */
+.nav__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.nav__logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.nav__name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-right: 1.5rem;
+}
+
+/* Checkbox de contrôle du menu (mobile uniquement) */
+.nav__checkbox {
+    display: none;
+}
+
+
+
+/* Pas de burger par défaut */
+.nav__toggle {
+    display: none;
+}
+
+.nav__menu {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    gap: 2.5rem;
+}
+
+/* Liens du menu */
+.nav__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.nav__links a {
+    font-size: 0.95rem;
+    color: var(--color-muted);
+}
+
+.nav__links a:hover {
+    color: var(--color-primary);
+}
+
+/* Boutons à droite */
+.nav__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+
+/* =========================
+   BOUTONS GÉNÉRAUX
+   ========================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem 1.3rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+/* Bouton bleu */
+.btn--primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #fff;
+}
+
+/* Effet au survol */
+.btn--primary:hover {
+    background-color: #1557b4;
+    border-color: #1557b4;
+    text-decoration: none;
+}
+
+/* Bouton contour bleu et fond blanc */
+.btn--ghost {
+    background-color: #fff;
+    border-color: var(--color-border);
+    color: var(--color-text);
+}
+
+/* Effet au survol */
+.btn--ghost:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+/* =========================
+   SECTION HERO
+   ========================= */
+
+.hero {
+    padding-block: 2.5rem;
+}
+
+/* Contenu du hero (texte + image) */
+.hero__inner {
+    display: flex;
+    flex-direction: column;                  /* colonne en mobile */
+    gap: 2rem;
+}
+
+/* Colonne texte */
+.hero__content h1 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+}
+
+.hero__text {
+    margin: 0 0 1.5rem;
+    color: var(--color-muted);
+    font-size: 0.95rem;
+}
+
+/* Boutons du hero */
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+/* Colonne image */
+.hero__media img {
+    width: 100%;
+    max-width: 520px;
+    display: block;
+    margin-inline: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+/* =========================
+   SECTIONS GÉNÉRALES
+   ========================= */
+
+.section {
+    padding-block: 2.5rem;
+}
+
+/* Titre centré */
+.section__header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section__header h2 {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+/* =========================
+   SECTION FONCTIONNALITÉS
+   ========================= */
+
+/* Grille des 3 fonctionnalités */
+.features__grid {
+    display: grid;
+    grid-template-columns: 1fr;             /* 1 colonne en mobile */
+    gap: 1.5rem;
+}
+
+/* Carte individuelle de fonctionnalité */
+.feature-card {
+    background-color: #fff;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    padding: 1.5rem 1.25rem;
+    text-align: left;
+}
+
+/* Image en haut de la carte */
+.feature-card__img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+/* Titre de la carte */
+.feature-card h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.05rem;
+}
+
+/* Texte de la carte */
+.feature-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-muted);
+}
+
+/* =========================
+   SECTIONS COMMUNICATION & APPAREILS
+   ========================= */
+
+.section__row {
+    display: flex;
+    flex-direction: column;                  /* colonne sur mobile */
+    gap: 2rem;
+}
+
+/* Variante où on inverse l'ordre des colonnes sur desktop */
+.section__row--reverse {
+    flex-direction: column;
+}
+
+/* Colonne texte */
+.section__content h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.6rem;
+}
+
+.section__content p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.95rem;
+}
+
+/* Colonne image */
+.section__media img {
+    width: 100%;
+    max-width: 520px;
+    display: block;
+    margin-inline: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.site-footer {
+    border-top: 1px solid var(--color-border);
+    padding-block: 1.2rem;
+    background-color: #fff;
+}
+
+.footer__inner {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--color-muted);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* ---- SMARTPHONE : largeur MAX 600px ---- */
+
+@media (max-width: 600px) {
+
+
+      .hero__content h1 {
+        font-size: 1.7rem;
+    }
+
+
+    .hero__actions .btn {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+    /* On montre le burger, on cache le menu par défaut */
+    .nav__toggle {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        width: 36px;
+        height: 36px;
+        border-radius: 999px;
+        border: 1px solid var(--color-border);
+        cursor: pointer;
+        padding: 6px;
+    }
+
+    .nav__toggle span {
+        height: 2px;
+        width: 100%;
+        background-color: var(--color-text);
+        border-radius: 999px;
+    }
+
+    .nav__menu {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: var(--nav-height);
+        background-color: #fff;
+        border-bottom: 1px solid var(--color-border);
+        display: none;                 /* caché tant que burger pas cliqué */
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 1.25rem 1.25rem;
+    }
+
+    .nav__links {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .nav__actions {
+        justify-content: flex-start;
+    }
+
+    /* Quand la checkbox est cochée, on ouvre le menu */
+    .nav__checkbox:checked + .nav__toggle + .nav__menu {
+        display: flex;
+    }
+
+    /* ton ancien code pour le hero mobile peut rester ici : */
+    .hero__content h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero__actions .btn {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+}
+
+
+/* ---- TABLETTE : largeur ENTRE 601px et 1024px ---- */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    /* On affiche le menu complet, plus besoin d'hamburger */
+    .nav__toggle {
+        display: none;                        /* on cache l'icône hamburger */
+    }
+
+    .nav__menu {
+        position: static;                     /* redevient dans le flux */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+        padding: 0;
+        border-bottom: none;
+        gap: 1.5rem;
+    }
+
+    .nav__links {
+        flex-direction: row;                  /* liens côte à côte */
+        gap: 1.5rem;
+    }
+
+    /* Hero en 2 colonnes (texte + image) */
+    .hero__inner {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .hero__content,
+    .hero__media {
+        flex: 1;
+    }
+
+    /* Grille des fonctionnalités en 2 colonnes */
+    .features__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Rangées communication/appareils en 2 colonnes */
+    .section__row,
+    .section__row--reverse {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .section__content,
+    .section__media {
+        flex: 1;
+    }
+}
+
+/* ---- DESKTOP : largeur MIN 1025px ---- */
+
+@media (min-width: 1025px) {
+
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav__menu {
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+        padding: 0;
+        border-bottom: none;
+        gap: 2.5rem;
+    }
+
+    .nav__links {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    /* Titre hero plus grand */
+    .hero__content h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero {
+        padding-block: 3.5rem;
+    }
+
+    /* Hero en 2 colonnes larges */
+    .hero__inner {
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    /* Grille des fonctionnalités en 3 colonnes */
+    .features__grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    /* Rangée standard : texte + image côte à côte */
+    .section__row {
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    /* Rangée inversée : image / texte inversés */
+    .section__row--reverse {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .section {
+        padding-block: 3.5rem;
+    }
+}
+
+
+
