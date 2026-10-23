@@ -1,124 +1,96 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Marcelo Medardo Bonilla Muso</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
-    <header class="hero">
-      <div class="container">
-        <h1>Marcelo Medardo Bonilla Muso</h1>
-
-        <p class="subtitle">Développeur Web Junior</p>
-
-        <p>
-          Je suis actuellement en formation en développement web et je travaille
-          principalement avec HTML, CSS et JavaScript. Je souhaite continuer à
-          développer mes compétences et apprendre davantage sur WordPress et le
-          développement front-end.
-        </p>
-
-        <a href="#projects" class="btn">Voir mes projets</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#172b29" />
+  <title>Marcelo Bonilla — Développeur web junior à Bruxelles</title>
+  <meta name="description" content="Portfolio de Marcelo Medardo Bonilla Muso, développeur web junior en dernière année de formation à Bruxelles. Découvrez mes projets HTML, CSS et JavaScript." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_BE" />
+  <meta property="og:title" content="Marcelo Bonilla — Développeur web junior" />
+  <meta property="og:description" content="De l’idée à l’interface : découvrez mes projets web, mon parcours et mes compétences. Basé à Bruxelles." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#accueil" aria-label="Marcelo Bonilla, accueil">mb<span>.</span></a>
+      <nav aria-label="Navigation principale"><a href="#projects">Projets</a><a href="#parcours">À propos</a><a href="#contact">Contact <span aria-hidden="true">↗</span></a></nav>
+    </div>
+  </header>
+  <main id="contenu">
+    <section class="hero container" id="accueil" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Développeur web junior · Bruxelles</p>
+        <h1 id="hero-title">De l’idée<br />à <em>l’interface.</em></h1>
+        <p class="intro">Moi, c’est Marcelo. En dernière année de formation en développement web, je construis des sites clairs, soignés et adaptés à tous les écrans.</p>
+        <div class="actions"><a class="button" href="#projects">Découvrir mes projets <span aria-hidden="true">↘</span></a><a class="text-link" href="mailto:Marcelo.bonilla@outlook.be">Échangeons <span aria-hidden="true">↗</span></a></div>
+        <p class="hero-note">HTML & CSS · JavaScript · L’envie de progresser</p>
       </div>
-    </header>
-
-    <main>
-      <section class="about">
-        <div class="container">
-          <h2>À propos de moi</h2>
-
-          <p>
-            Passionné par le développement web, j’aime créer des interfaces
-            modernes et responsives. Je suis motivé pour apprendre et progresser
-            dans un environnement professionnel et collaboratif.
-          </p>
-        </div>
-      </section>
-
-      <section class="skills">
-        <div class="container">
-          <h2>Compétences</h2>
-
-          <div class="skills-list">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>Responsive Design</span>
-            <span>UI / UX Basics</span>
-            <span>WordPress (bases)</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="projects" id="projects">
-        <div class="container">
-          <h2>Mes projets</h2>
-
-          <div class="project-grid">
-            <article class="card">
-              <img src="assets/sb_capture.png" alt="Site sube y baja" />
-              <h3>Projet JavaScript</h3>
-
-              <p>
-                Création d’un site vitrine pour une entreprise de déménagement
-                avec navigation responsive, section services et formulaire de
-                contact.
-              </p>
-
-              <p><strong>Technologies :</strong> HTML / CSS / JavaScript</p>
-
-              <a href="subeYbaja_site_2/SubeYbaja_web/index.html " class="btn"
-                >Voir le projet</a
-              >
-            </article>
-
-            <article class="card">
-              <img src="assets/landing_capture.png" alt="landing page" />
-              <h3>Landing page responsive</h3>
-              <p>
-                Réalisation d’une page moderne avec mise en page responsive,
-                call-to-action et sections visuelles.
-              </p>
-              <p><strong>Technologies :</strong> HTML / CSS</p>
-              <a href="LBA_EXAMEN_WEB/index.html" class="btn">
-                Voir le projet</a
-              >
-            </article>
-
-            <article class="card">
-              <img src="assets/mee_capture.png" alt="meet page" />
-              <h3>Site vitrine responsive</h3>
-              <p>
-                Mini projet interactif permettant de manipuler le DOM et
-                d’améliorer mes compétences en HTML/CSS
-              </p>
-              <p><strong>Technologies :</strong>HTML / CSS</p>
-
-              <a href="siteWeb_Meet_exo/index.html" class="btn">
-                Voir le projet
-              </a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact">
-        <div class="container">
-          <h2>Contact</h2>
-
-          <p><strong>Email :</strong> Marcelo.bonilla@outlook.be</p>
-          <p><strong>Ville :</strong> Bruxelles</p>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="container">
-        <p>© 2026 Marcelo Medardo Bonilla Muso</p>
+      <div class="hero-visual" aria-label="Aperçu de mon projet FlightRunner">
+        <div class="visual-top"><span><i></i><i></i><i></i></span><span>Un aperçu de mon travail</span></div>
+        <img src="assets/landing_capture.png" alt="Capture de la landing page FlightRunner, un projet de présentation de chaussures" fetchpriority="high" />
+        <div class="visual-bottom"><span>FlightRunner</span><span>Design responsive ↗</span></div>
       </div>
-    </footer>
-  </body>
+    </section>
+    <section class="projects section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">Apprendre en construisant</p><h2 id="projects-title">Une sélection de projets<span>.</span></h2></div><p>Des sites d’entreprise en ligne<br />et des projets de formation.</p></div>
+        <div class="project-grid">
+          <article class="card">
+            <a class="project-image sage" href="https://www.subeybaja-bruxelles.be/" target="_blank" rel="noopener noreferrer" aria-label="Visiter Sube y Baja, nouvel onglet"><img src="assets/sb_capture.png" alt="Aperçu du site de déménagement Sube y Baja" loading="lazy" /></a>
+            <div class="card-body">
+              <p class="project-type">01 / Site d’entreprise · En ligne</p>
+              <h3>Sube y Baja</h3>
+              <p>Présenter les services d’une entreprise de déménagement à Bruxelles et guider les visiteurs vers une demande de devis.</p>
+              <p class="project-detail"><strong>Côté développement :</strong> navigation mobile en JavaScript, formulaire de devis connecté à EmailJS et balisage pour le référencement local.</p>
+              <ul class="tags" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>EmailJS</li></ul>
+              <div class="project-actions"><a class="project-link" href="https://www.subeybaja-bruxelles.be/" target="_blank" rel="noopener noreferrer">Voir le site <span aria-hidden="true">↗</span></a><a class="source-link" href="https://github.com/Medardo0/medardo0.github.io" target="_blank" rel="noopener noreferrer" aria-label="Code source de Sube y Baja sur GitHub">Code GitHub ↗</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <a class="project-image clean-brand" href="https://cleanbrotherservices.be/" target="_blank" rel="noopener noreferrer" aria-label="Visiter Clean Brothers Services, nouvel onglet"><div class="brand-preview"><img src="assets/clean-brothers-logo.png" alt="Identité visuelle de Clean Brothers Services" loading="lazy" /><span>Nettoyage & rénovation</span><span class="preview-caption">Site vitrine multi-pages</span></div></a>
+            <div class="card-body">
+              <p class="project-type">02 / Site d’entreprise · En ligne</p>
+              <h3>Clean Brothers Services</h3>
+              <p>Organiser deux activités, le nettoyage et la rénovation, dans un site avec des pages de services distinctes et un accès direct au contact.</p>
+              <p class="project-detail"><strong>Côté développement :</strong> menu mobile accessible, animations à l’apparition avec IntersectionObserver et gestion des états d’envoi du formulaire EmailJS.</p>
+              <ul class="tags" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>EmailJS</li></ul>
+              <div class="project-actions"><a class="project-link" href="https://cleanbrotherservices.be/" target="_blank" rel="noopener noreferrer">Voir le site <span aria-hidden="true">↗</span></a><a class="source-link" href="https://github.com/Medardo0/CleanBrothersServices_web" target="_blank" rel="noopener noreferrer" aria-label="Code source de Clean Brothers Services sur GitHub">Code GitHub ↗</a></div>
+            </div>
+          </article>
+          <article class="card">
+            <a class="project-image web2risk-brand" href="https://github.com/Medardo0/Web2Risk-Agency" target="_blank" rel="noopener noreferrer" aria-label="Découvrir le code de Web2Risk Agency sur GitHub, nouvel onglet"><div class="brand-preview"><img src="assets/web2risk-logo.png" alt="Logo du projet Web2Risk Agency" loading="lazy" /><span>Une agence web, de l’interface au serveur</span><span class="preview-caption">Projet d’évaluation · HTML, CSS, JavaScript & PHP</span></div></a>
+            <div class="card-body">
+              <p class="project-type">03 / Site one page · Projet d’évaluation</p>
+              <h3>Web2Risk Agency</h3>
+              <p>Construire une page d’agence web en anglais, avec ses services, son équipe et un formulaire de contact, à partir des contenus et des visuels fournis.</p>
+              <p class="project-detail"><strong>Côté développement :</strong> envoi sans rechargement avec Fetch, validation des champs côté PHP et gestion des erreurs. Le menu mobile se ferme aussi avec la touche Échap.</p>
+              <ul class="tags" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>Fetch</li></ul>
+              <a class="project-link" href="https://github.com/Medardo0/Web2Risk-Agency" target="_blank" rel="noopener noreferrer">Explorer le code GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="card">
+            <a class="project-image peach" href="LBA_EXAMEN_WEB/index.html" aria-label="Découvrir le projet FlightRunner"><img src="assets/landing_capture.png" alt="Aperçu du site FlightRunner" loading="lazy" /></a>
+            <div class="card-body"><p class="project-type">04 / Landing page · Exercice de formation</p><h3>FlightRunner</h3><p>Présenter une chaussure à travers une page visuelle : composition des sections, hiérarchie des titres et adaptation de la mise en page aux écrans.</p><ul class="tags" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>Responsive</li></ul><a class="project-link" href="LBA_EXAMEN_WEB/index.html">Explorer le projet <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="card">
+            <a class="project-image lilac" href="siteWeb_Meet_exo/index.html" aria-label="Découvrir le projet Meet World"><img src="assets/mee_capture.png" alt="Aperçu du site Meet World" loading="lazy" /></a>
+            <div class="card-body"><p class="project-type">05 / Intégration · Exercice de formation</p><h3>Meet World</h3><p>Reproduire une interface de service de visioconférence avec une navigation mobile, des sections illustrées et une grille de fonctionnalités.</p><ul class="tags" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>Responsive</li></ul><a class="project-link" href="siteWeb_Meet_exo/index.html">Explorer le projet <span aria-hidden="true">↗</span></a></div>
+          </article>
+        </div>
+        <a class="text-link github-link" href="https://github.com/Medardo0/portofio_web" target="_blank" rel="noopener noreferrer">Consulter le code sur GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <section class="about section container" id="parcours" aria-labelledby="about-title">
+      <div><p class="eyebrow">Le développeur derrière les pages</p><h2 id="about-title">Curieux par nature.<br /><em>Développeur en devenir.</em></h2></div>
+      <div class="about-copy"><p>Je m’appelle Marcelo Medardo Bonilla Muso et je suis en dernière année de formation en développement web à Bruxelles. J’aime donner forme à une idée et comprendre comment chaque détail contribue à une interface agréable à utiliser.</p><p>Je pratique HTML, CSS et JavaScript à travers mes projets. Mon objectif : consolider mes bases en front-end, approfondir WordPress et progresser au sein d’un environnement professionnel et collaboratif.</p><div class="skill-groups"><div><h3>Ce que je pratique</h3><p>HTML · CSS · JavaScript<br />Mise en page responsive</p></div><div><h3>Ce que j’approfondis</h3><p>WordPress : les bases<br />Principes UI / UX</p></div></div></div>
+    </section>
+    <section class="contact section" id="contact" aria-labelledby="contact-title"><div class="container contact-inner"><div><p class="eyebrow">Faisons connaissance</p><h2 id="contact-title">Et si on échangeait<br />sur la suite <em>?</em></h2><p>Un projet, une opportunité ou un retour sur mon travail ?<br />Je serai ravi d’en discuter avec vous.</p></div><div class="contact-actions"><a class="button button-light" href="mailto:Marcelo.bonilla@outlook.be">M’écrire un message <span aria-hidden="true">↗</span></a><a class="email" href="mailto:Marcelo.bonilla@outlook.be">Marcelo.bonilla@outlook.be</a><p>Basé à Bruxelles, Belgique</p></div></div></section>
+  </main>
+  <footer class="container footer"><p>© 2026 Marcelo Medardo Bonilla Muso</p><a href="#accueil">Retour en haut ↑</a></footer>
+</body>
 </html>
